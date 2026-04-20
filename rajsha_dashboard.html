@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<!-- saved from url=(0054)file:///C:/Users/hp/Downloads/rajsha_dashboard_24.html -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+<html lang="en">
+<head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Rajsha Chemicals — Live Dashboard</title>
-<link href="./Rajsha Chemicals — Live Dashboard mmmmmmmmm_files/css2" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{
   --bg:#0f1117;--bg2:#161b27;--bg3:#1e2535;
@@ -215,28 +215,28 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min
   <div class="logo">
     <div class="logo-icon">
       <svg viewBox="0 0 18 18" fill="none">
-        <rect x="1" y="1" width="7" height="7" rx="2" fill="#4e9eff"></rect>
-        <rect x="10" y="1" width="7" height="7" rx="2" fill="#4e9eff" opacity="0.6"></rect>
-        <rect x="1" y="10" width="7" height="7" rx="2" fill="#4e9eff" opacity="0.6"></rect>
-        <rect x="10" y="10" width="7" height="7" rx="2" fill="#4e9eff" opacity="0.3"></rect>
+        <rect x="1" y="1" width="7" height="7" rx="2" fill="#4e9eff"/>
+        <rect x="10" y="1" width="7" height="7" rx="2" fill="#4e9eff" opacity="0.6"/>
+        <rect x="1" y="10" width="7" height="7" rx="2" fill="#4e9eff" opacity="0.6"/>
+        <rect x="10" y="10" width="7" height="7" rx="2" fill="#4e9eff" opacity="0.3"/>
       </svg>
     </div>
     <div>
       <div class="logo-text">Rajsha Chemicals Pvt. Ltd.</div>
-      <div class="logo-sub">TWC Group · Operations Dashboard</div>
+      <div class="logo-sub">TWC Group &middot; Operations Dashboard</div>
     </div>
   </div>
   <div class="topbar-right">
     <div class="live-badge"><span class="live-dot"></span>LIVE</div>
-    <div class="clock" id="clock">17:26:30</div>
+    <div class="clock" id="clock">--:--:--</div>
     <div class="view-toggle">
-      <button class="view-btn active" onclick="setView(&#39;staff&#39;,this)">Staff</button>
-      <button class="view-btn" onclick="setView(&#39;senior&#39;,this)">Senior</button>
+      <button class="view-btn active" onclick="setView('staff',this)">Staff</button>
+      <button class="view-btn" onclick="setView('senior',this)">Senior</button>
     </div>
   </div>
 </div>
-<div class="dept-tabs" id="dept-tabs"><button class="dept-tab active" onclick="sw(0)">Production</button><button class="dept-tab" onclick="sw(1)">Quality / Lab</button><button class="dept-tab" onclick="sw(2)">Safety / EHS</button><button class="dept-tab" onclick="sw(3)">Inventory</button><button class="dept-tab" onclick="sw(4)">Finance</button><button class="dept-tab" onclick="sw(5)">Dispatch</button><button class="dept-tab" onclick="sw(6)">Formaldehyde Plant</button><button class="dept-tab" onclick="sw(7)">Fire Pump House</button><button class="dept-tab" onclick="sw(8)">HR / Manpower</button></div>
-<div class="main" id="mc"><div class="date-bar"><div><div class="date-text">Production — Daily Data Entry</div><div class="date-day" style="color:var(--blue)">Sat, 18 Apr 2026</div></div><span style="font-size:12px;font-weight:600;color:var(--blue);background:rgba(78,158,255,0.1);border:1px solid rgba(78,158,255,0.25);padding:4px 12px;border-radius:20px;">APR 2026</span></div><div class="prod-note">Enter today's production quantity (in kg) for each product across all plants and blenders. Click "Edit Product Names" to rename any product — changes are saved for future use. Submit before 6:00 PM for senior management review.</div><div class="kpi-grid"><div class="kpi-card"><div class="kpi-label">Total output today</div><div class="kpi-val" style="color:var(--blue)">— <span class="kpi-unit">kg (all plants)</span></div><div class="kpi-trend good">Fill EOD data below</div></div><div class="kpi-card"><div class="kpi-label">Machine downtime</div><div class="kpi-val" style="color:var(--blue)">— <span class="kpi-unit">hrs</span></div><div class="kpi-trend warn">Update in form below</div></div><div class="kpi-card"><div class="kpi-label">Plants running</div><div class="kpi-val" style="color:var(--blue)">6 <span class="kpi-unit">/ 6</span></div><div class="kpi-trend good">Blender 1, 2, Plant 2-5</div></div><div class="kpi-card"><div class="kpi-label">Production status</div><div class="kpi-val" style="color:var(--blue)">— <span class="kpi-unit"></span></div><div class="kpi-trend good">Submit EOD to update</div></div></div><div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;flex-wrap:wrap;gap:8px;"><div style="font-size:13px;font-weight:500;color:var(--text2);">Production data entry — all plants &amp; blenders</div><button class="prod-edit-btn" onclick="togProdEdit()">Edit Product Names</button></div><div class="prod-sec"><div class="prod-ttl">Blender 1</div><table class="prod-tbl"><thead><tr><th style="min-width:180px;">Product Name</th><th class="ctr" style="min-width:150px;">Production today (kg)</th><th style="min-width:200px;">Remarks / issues</th></tr></thead><tbody><tr><td class="pname">HM 65</td><td><input class="prod-input" type="number" min="0" step="0.1" placeholder="0.0" id="prd_blender1_0_total" value=""></td><td><input class="prod-input" type="text" placeholder="e.g. machine issue" id="prd_blender1_0_remark" value="" style="text-align:left;font-family:DM Sans,sans-serif;"></td></tr><tr><td class="pname">HM 72</td><td><input class="prod-input" type="number" min="0" step="0.1" placeholder="0.0" id="prd_blender1_1_total" value=""></td><td><input class="prod-input" type="text" placeholder="e.g. machine issue" id="prd_blender1_1_remark" value="" style="text-align:left;font-family:DM Sans,sans-serif;"></td></tr><tr><td class="pname">HM 72 C</td><td><input class="prod-input" type="number" min="0" step="0.1" placeholder="0.0" id="prd_blender1_2_total" value=""></td><td><input class="prod-input" type="text" placeholder="e.g. machine issue" id="prd_blender1_2_remark" value="" style="text-align:left;font-family:DM Sans,sans-serif;"></td></tr><tr><td class="pname">HM 50</td><td><input class="prod-input" type="number" min="0" step="0.1" placeholder="0.0" id="prd_blender1_3_total" value=""></td><td><input class="prod-input" type="text" placeholder="e.g. machine issue" id="prd_blender1_3_remark" value="" style="text-align:left;font-family:DM Sans,sans-serif;"></td></tr><tr><td class="pname">HM 65-0</td><td><input class="prod-input" type="number" min="0" step="0.1" placeholder="0.0" id="prd_blender1_4_total" value=""></td><td><input class="prod-input" type="text" placeholder="e.g. machine issue" id="prd_blender1_4_remark" value="" style="text-align:left;font-family:DM Sans,sans-serif;"></td></tr></tbody></table></div><div class="prod-sec"><div class="prod-ttl">Blender 2</div><table class="prod-tbl"><thead><tr><th style="min-width:180px;">Product Name</th><th class="ctr" style="min-width:150px;">Production today (kg)</th><th style="min-width:200px;">Remarks / issues</th></tr></thead><tbody><tr><td class="pname">SCH</td><td><input class="prod-input" type="number" min="0" step="0.1" placeholder="0.0" id="prd_blender2_0_total" value=""></td><td><input class="prod-input" type="text" placeholder="e.g. machine issue" id="prd_blender2_0_remark" value="" style="text-align:left;font-family:DM Sans,sans-serif;"></td></tr><tr><td class="pname">OSCH-M</td><td><input class="prod-input" type="number" min="0" step="0.1" placeholder="0.0" id="prd_blender2_1_total" value=""></td><td><input class="prod-input" type="text" placeholder="e.g. machine issue" id="prd_blender2_1_remark" value="" style="text-align:left;font-family:DM Sans,sans-serif;"></td></tr></tbody></table></div><div class="prod-sec"><div class="prod-ttl">Plant 2</div><table class="prod-tbl"><thead><tr><th style="min-width:180px;">Product Name</th><th class="ctr" style="min-width:150px;">Production today (kg)</th><th style="min-width:200px;">Remarks / issues</th></tr></thead><tbody><tr><td class="pname">RSA</td><td><input class="prod-input" type="number" min="0" step="0.1" placeholder="0.0" id="prd_plant2_0_total" value=""></td><td><input class="prod-input" type="text" placeholder="e.g. machine issue" id="prd_plant2_0_remark" value="" style="text-align:left;font-family:DM Sans,sans-serif;"></td></tr></tbody></table></div><div class="prod-sec"><div class="prod-ttl">Plant 3</div><table class="prod-tbl"><thead><tr><th style="min-width:180px;">Product Name</th><th class="ctr" style="min-width:150px;">Production today (kg)</th><th style="min-width:200px;">Remarks / issues</th></tr></thead><tbody><tr><td class="pname">RR 90</td><td><input class="prod-input" type="number" min="0" step="0.1" placeholder="0.0" id="prd_plant3_0_total" value=""></td><td><input class="prod-input" type="text" placeholder="e.g. machine issue" id="prd_plant3_0_remark" value="" style="text-align:left;font-family:DM Sans,sans-serif;"></td></tr><tr><td class="pname">RR 95</td><td><input class="prod-input" type="number" min="0" step="0.1" placeholder="0.0" id="prd_plant3_1_total" value=""></td><td><input class="prod-input" type="text" placeholder="e.g. machine issue" id="prd_plant3_1_remark" value="" style="text-align:left;font-family:DM Sans,sans-serif;"></td></tr><tr><td class="pname">RR 110</td><td><input class="prod-input" type="number" min="0" step="0.1" placeholder="0.0" id="prd_plant3_2_total" value=""></td><td><input class="prod-input" type="text" placeholder="e.g. machine issue" id="prd_plant3_2_remark" value="" style="text-align:left;font-family:DM Sans,sans-serif;"></td></tr><tr><td class="pname">RR 160</td><td><input class="prod-input" type="number" min="0" step="0.1" placeholder="0.0" id="prd_plant3_3_total" value=""></td><td><input class="prod-input" type="text" placeholder="e.g. machine issue" id="prd_plant3_3_remark" value="" style="text-align:left;font-family:DM Sans,sans-serif;"></td></tr><tr><td class="pname">RR 95 A</td><td><input class="prod-input" type="number" min="0" step="0.1" placeholder="0.0" id="prd_plant3_4_total" value=""></td><td><input class="prod-input" type="text" placeholder="e.g. machine issue" id="prd_plant3_4_remark" value="" style="text-align:left;font-family:DM Sans,sans-serif;"></td></tr><tr><td class="pname">RR 125</td><td><input class="prod-input" type="number" min="0" step="0.1" placeholder="0.0" id="prd_plant3_5_total" value=""></td><td><input class="prod-input" type="text" placeholder="e.g. machine issue" id="prd_plant3_5_remark" value="" style="text-align:left;font-family:DM Sans,sans-serif;"></td></tr><tr><td class="pname">PDR</td><td><input class="prod-input" type="number" min="0" step="0.1" placeholder="0.0" id="prd_plant3_6_total" value=""></td><td><input class="prod-input" type="text" placeholder="e.g. machine issue" id="prd_plant3_6_remark" value="" style="text-align:left;font-family:DM Sans,sans-serif;"></td></tr><tr><td class="pname">RR 95 H</td><td><input class="prod-input" type="number" min="0" step="0.1" placeholder="0.0" id="prd_plant3_7_total" value=""></td><td><input class="prod-input" type="text" placeholder="e.g. machine issue" id="prd_plant3_7_remark" value="" style="text-align:left;font-family:DM Sans,sans-serif;"></td></tr><tr><td class="pname">RR 80 H</td><td><input class="prod-input" type="number" min="0" step="0.1" placeholder="0.0" id="prd_plant3_8_total" value=""></td><td><input class="prod-input" type="text" placeholder="e.g. machine issue" id="prd_plant3_8_remark" value="" style="text-align:left;font-family:DM Sans,sans-serif;"></td></tr><tr><td class="pname">RR 100 H</td><td><input class="prod-input" type="number" min="0" step="0.1" placeholder="0.0" id="prd_plant3_9_total" value=""></td><td><input class="prod-input" type="text" placeholder="e.g. machine issue" id="prd_plant3_9_remark" value="" style="text-align:left;font-family:DM Sans,sans-serif;"></td></tr><tr><td class="pname">R-40</td><td><input class="prod-input" type="number" min="0" step="0.1" placeholder="0.0" id="prd_plant3_10_total" value=""></td><td><input class="prod-input" type="text" placeholder="e.g. machine issue" id="prd_plant3_10_remark" value="" style="text-align:left;font-family:DM Sans,sans-serif;"></td></tr><tr><td class="pname">COLOPHONY</td><td><input class="prod-input" type="number" min="0" step="0.1" placeholder="0.0" id="prd_plant3_11_total" value=""></td><td><input class="prod-input" type="text" placeholder="e.g. machine issue" id="prd_plant3_11_remark" value="" style="text-align:left;font-family:DM Sans,sans-serif;"></td></tr></tbody></table></div><div class="prod-sec"><div class="prod-ttl">Plant 4</div><table class="prod-tbl"><thead><tr><th style="min-width:180px;">Product Name</th><th class="ctr" style="min-width:150px;">Production today (kg)</th><th style="min-width:200px;">Remarks / issues</th></tr></thead><tbody><tr><td class="pname">SA-85</td><td><input class="prod-input" type="number" min="0" step="0.1" placeholder="0.0" id="prd_plant4_0_total" value=""></td><td><input class="prod-input" type="text" placeholder="e.g. machine issue" id="prd_plant4_0_remark" value="" style="text-align:left;font-family:DM Sans,sans-serif;"></td></tr><tr><td class="pname">PB-110</td><td><input class="prod-input" type="number" min="0" step="0.1" placeholder="0.0" id="prd_plant4_1_total" value=""></td><td><input class="prod-input" type="text" placeholder="e.g. machine issue" id="prd_plant4_1_remark" value="" style="text-align:left;font-family:DM Sans,sans-serif;"></td></tr><tr><td class="pname">POLYTERPENE</td><td><input class="prod-input" type="number" min="0" step="0.1" placeholder="0.0" id="prd_plant4_2_total" value=""></td><td><input class="prod-input" type="text" placeholder="e.g. machine issue" id="prd_plant4_2_remark" value="" style="text-align:left;font-family:DM Sans,sans-serif;"></td></tr><tr><td class="pname">TP-115</td><td><input class="prod-input" type="number" min="0" step="0.1" placeholder="0.0" id="prd_plant4_3_total" value=""></td><td><input class="prod-input" type="text" placeholder="e.g. machine issue" id="prd_plant4_3_remark" value="" style="text-align:left;font-family:DM Sans,sans-serif;"></td></tr></tbody></table></div><div class="prod-sec"><div class="prod-ttl">Plant 5</div><table class="prod-tbl"><thead><tr><th style="min-width:180px;">Product Name</th><th class="ctr" style="min-width:150px;">Production today (kg)</th><th style="min-width:200px;">Remarks / issues</th></tr></thead><tbody><tr><td class="pname">WAX</td><td><input class="prod-input" type="number" min="0" step="0.1" placeholder="0.0" id="prd_plant5_0_total" value=""></td><td><input class="prod-input" type="text" placeholder="e.g. machine issue" id="prd_plant5_0_remark" value="" style="text-align:left;font-family:DM Sans,sans-serif;"></td></tr></tbody></table></div><div class="prod-sec"><div class="prod-ttl">Additional details</div><div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:12px;"><div class="form-group"><div class="form-label">Overall machine downtime (hrs)</div><input class="finput" type="number" step="0.5" placeholder="e.g. 2.5" id="prod_downtime" value=""></div><div class="form-group"><div class="form-label">Downtime reason</div><input class="finput" type="text" placeholder="e.g. Reactor B valve issue" id="prod_downtime_reason" value=""></div><div class="form-group"><div class="form-label">Overall production status</div><select class="fselect" id="prod_status"><option>On track</option><option>Slightly delayed</option><option>Critical delay</option></select></div></div><div class="form-group"><div class="form-label">Notes for senior management</div><textarea class="ftextarea" placeholder="Any highlights, issues, or observations from today..." id="prod_notes"></textarea></div></div><button class="prod-sub-btn" onclick="subProduction()">Submit production EOD report — notify management</button></div>
+<div class="dept-tabs" id="dept-tabs"></div>
+<div class="main" id="mc"></div>
 <div class="toast" id="toast">Update submitted</div>
 <script>
 var WD=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
@@ -508,6 +508,9 @@ function subFHD(){
     d.ss='good';
   }
   SD['formaldehyde']={submitted:true,date:row.date,prod:row.fa_prod,ratio:ratio};
+  var fhdData={date:getNow(),at:getTm()};
+  ['fa_open','fa_prod','fa_dispatch','fa_transfer','fa_close','ratio','me_open','me_received','me_consumption','me_close','cr_open','cr_incoming','cr_dist_feed','cr_methanol_recovery','cr_close','wfd_open','wfd_from_dist','wfd_consumption','wfd_close','steam','electricity','ro_water','filled_by','checked_by','remarks'].forEach(function(k){var e=el('fhd_'+k);if(e&&e.value!==undefined)fhdData[k]=e.value;});
+  syncToSheets('Formaldehyde Plant',fhdData,function(ok){showSyncResult(ok,'Formaldehyde');});
   toast('Formaldehyde plant report submitted — management notified');
   setTimeout(renderFHD,400);
 }
@@ -643,6 +646,36 @@ var SP_SITE_URL='https://rcpl291.sharepoint.com';
 var SP_SITE_NAME='RajshaChemicals';
 var SP_LIST='RajshaProduction';
 
+// ═══════════════════════════════════════════════════
+// GOOGLE SHEETS SYNC - paste your Apps Script URL below
+// ═══════════════════════════════════════════════════
+var GSCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyuSJqnWfrI1ieb0nwFzEo_H8H9lJesT54fgm1LRaedkezSYTAkYAy0RrO8A4DF20IS/exec';
+
+function syncToSheets(dept, data, onDone){
+  if(!GSCRIPT_URL || GSCRIPT_URL === 'PASTE_YOUR_APPS_SCRIPT_URL_HERE'){
+    if(onDone) onDone(false);
+    return;
+  }
+  var payload = JSON.stringify({department: dept, data: data, timestamp: new Date().toISOString()});
+  fetch(GSCRIPT_URL, {
+    method: 'POST',
+    body: payload,
+    headers: {'Content-Type': 'text/plain'}
+  })
+  .then(function(r){ if(onDone) onDone(r.ok); })
+  .catch(function(){ if(onDone) onDone(false); });
+}
+
+function showSyncResult(ok, dept){
+  var msg = ok
+    ? dept + ' report saved to Dashboard and Excel'
+    : dept + ' report saved to Dashboard. Excel sync: paste URL in settings.';
+  toast(msg);
+}
+
+// ═══════════════════════════════════════════════════
+// PRODUCTION SUBMIT
+// ═══════════════════════════════════════════════════
 function subProduction(){
   var n=new Date();
   var plants=getProdPlants();
@@ -663,6 +696,7 @@ function subProduction(){
     'plant5_0':'Plant 5 - WAX'
   };
   var fieldValues={};
+  var sheetRow={date:'',totalOutput:0,downtime:'',downtimeReason:'',status:''};
   plants.forEach(function(plant){
     plant.products.forEach(function(prod,ri){
       var pKey=plant.id+'_'+ri;
@@ -670,6 +704,7 @@ function subProduction(){
       var rem=(el('prd_'+pKey+'_remark')).value||'';
       totalOutput+=tv;
       if(tv>0||rem) fieldValues[pKey]={name:prodMap[pKey]||prod,qty:tv,remark:rem};
+      if(prodMap[pKey]) sheetRow[prodMap[pKey]]=tv;
     });
   });
   var dateStr=n.getDate()+'-'+MN[n.getMonth()]+'-'+n.getFullYear();
@@ -678,8 +713,13 @@ function subProduction(){
   var dtReason=(el('prod_downtime_reason')).value||'';
   var status=(el('prod_status')).value||'On track';
   var notes=(el('prod_notes')).value||'';
-
-  // Save to Dashboard
+  sheetRow.date=dateStr;
+  sheetRow.totalOutput=totalRounded;
+  sheetRow.downtime=downtime;
+  sheetRow.downtimeReason=dtReason;
+  sheetRow.status=status;
+  sheetRow.notes=notes;
+  sheetRow.submittedAt=getTm();
   var row={key:n.getDate()+'-'+(n.getMonth()+1)+'-'+n.getFullYear(),date:dateStr,totalOutput:totalRounded,downtime:downtime,downtime_reason:dtReason,status:status,notes:notes,reportedAt:getTm(),fields:fieldValues};
   if(!SD['prod_log'])SD['prod_log']=[];
   SD['prod_log']=SD['prod_log'].filter(function(r){return r.key!==row.key;});
@@ -692,144 +732,57 @@ function subProduction(){
     d.sm[0].v=totalRounded+' kg';d.sm[3].v=status;
     d.ss=status==='On track'?'good':status==='Critical delay'?'bad':'warn';
   }
-
-  // Show success popup
+  syncToSheets('Production',sheetRow,function(ok){showSyncResult(ok,'Production');});
   showProdPopup(dateStr,totalRounded,downtime,dtReason,status,fieldValues,notes);
-  toast('Report saved successfully');
   setTimeout(renderProduction,500);
 }
 
 function showProdPopup(dateStr,totalRounded,downtime,dtReason,status,fieldValues,notes){
   var ex=document.getElementById('psp');if(ex)ex.remove();
-
-  // Build full text report for WhatsApp / Excel paste
-  var rpt='PRODUCTION REPORT\n';
-  rpt+='Date: '+dateStr+'  Time: '+getTm()+'\n';
-  rpt+='Total Output: '+totalRounded+' kg\n';
-  rpt+='Status: '+status+'\n';
-  rpt+='Downtime: '+downtime+' hrs'+(dtReason?' - '+dtReason:'')+'\n';
-  if(notes) rpt+='Notes: '+notes+'\n';
-  rpt+='\n--- Product wise ---\n';
-  Object.keys(fieldValues).forEach(function(k){
-    var f=fieldValues[k];if(f.qty>0) rpt+=f.name+': '+f.qty+' kg\n';
-  });
-  window._prodRpt=rpt;
-
   var sColor=status==='On track'?'#22c97a':status==='Critical delay'?'#f04f4f':'#f5a623';
   var dColor=parseFloat(downtime)>0?'#f5a623':'#22c97a';
-
-  // Build popup DOM
-  var ov=document.createElement('div');
-  ov.id='psp';
+  var rpt='PRODUCTION REPORT - '+dateStr+' '+getTm()+'\n';
+  rpt+='Total: '+totalRounded+' kg | Status: '+status+' | Downtime: '+downtime+' hrs\n';
+  if(dtReason) rpt+='Reason: '+dtReason+'\n';
+  rpt+='---\n';
+  Object.keys(fieldValues).forEach(function(k){var f=fieldValues[k];if(f.qty>0)rpt+=f.name+': '+f.qty+' kg\n';});
+  window._prodRpt=rpt;
+  var ov=document.createElement('div');ov.id='psp';
   ov.style.cssText='position:fixed;inset:0;background:rgba(0,0,0,0.88);z-index:9999;display:flex;align-items:center;justify-content:center;padding:16px;';
-
   var box=document.createElement('div');
-  box.style.cssText='background:#161b27;border:1px solid rgba(34,201,122,0.3);border-radius:16px;padding:24px;max-width:500px;width:100%;max-height:92vh;overflow-y:auto;';
-
-  // Header
-  var hdr=document.createElement('div');
-  hdr.style.cssText='display:flex;align-items:center;gap:12px;margin-bottom:18px;';
-  var tick=document.createElement('div');
-  tick.style.cssText='width:48px;height:48px;background:rgba(34,201,122,0.15);border:2px solid #22c97a;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#22c97a;font-size:26px;flex-shrink:0;';
-  tick.innerHTML='&#10003;';
+  box.style.cssText='background:#161b27;border:1px solid rgba(34,201,122,0.3);border-radius:16px;padding:24px;max-width:480px;width:100%;max-height:92vh;overflow-y:auto;';
+  var hdr=document.createElement('div');hdr.style.cssText='display:flex;align-items:center;gap:12px;margin-bottom:18px;';
+  var tick=document.createElement('div');tick.style.cssText='width:48px;height:48px;background:rgba(34,201,122,0.15);border:2px solid #22c97a;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#22c97a;font-size:26px;flex-shrink:0;';tick.innerHTML='&#10003;';
   var htxt=document.createElement('div');
-  var ht1=document.createElement('div');ht1.style.cssText='font-size:17px;font-weight:700;color:#e8eaf0;';ht1.textContent='Report Saved Successfully';
+  var ht1=document.createElement('div');ht1.style.cssText='font-size:17px;font-weight:700;color:#e8eaf0;';ht1.textContent='Report Submitted';
   var ht2=document.createElement('div');ht2.style.cssText='font-size:12px;color:#8b90a0;margin-top:2px;';ht2.textContent=dateStr+' | '+getTm();
   htxt.appendChild(ht1);htxt.appendChild(ht2);hdr.appendChild(tick);hdr.appendChild(htxt);box.appendChild(hdr);
-
-  // Stats
-  var stats=document.createElement('div');
-  stats.style.cssText='display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:16px;';
-  function mkS(l,v,c){
-    var d=document.createElement('div');d.style.cssText='background:#1e2535;border-radius:10px;padding:12px;text-align:center;';
-    var dl=document.createElement('div');dl.style.cssText='font-size:10px;color:#8b90a0;margin-bottom:4px;text-transform:uppercase;';dl.textContent=l;
-    var dv=document.createElement('div');dv.style.cssText='font-size:15px;font-weight:700;color:'+c+';';dv.textContent=v;
-    d.appendChild(dl);d.appendChild(dv);return d;
-  }
-  stats.appendChild(mkS('Total Output',totalRounded+' kg','#4e9eff'));
+  var stats=document.createElement('div');stats.style.cssText='display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:16px;';
+  function mkS(l,v,c){var d=document.createElement('div');d.style.cssText='background:#1e2535;border-radius:10px;padding:12px;text-align:center;';var dl=document.createElement('div');dl.style.cssText='font-size:10px;color:#8b90a0;margin-bottom:4px;text-transform:uppercase;';dl.textContent=l;var dv=document.createElement('div');dv.style.cssText='font-size:14px;font-weight:700;color:'+c+';';dv.textContent=v;d.appendChild(dl);d.appendChild(dv);return d;}
+  stats.appendChild(mkS('Total',totalRounded+' kg','#4e9eff'));
   stats.appendChild(mkS('Status',status,sColor));
   stats.appendChild(mkS('Downtime',downtime+' hrs',dColor));
   box.appendChild(stats);
-
-  // Products
   var prodKeys=Object.keys(fieldValues).filter(function(k){return fieldValues[k].qty>0;});
   if(prodKeys.length>0){
-    var pb=document.createElement('div');pb.style.cssText='background:#1e2535;border-radius:10px;padding:14px;margin-bottom:16px;max-height:150px;overflow-y:auto;';
-    var pl=document.createElement('div');pl.style.cssText='font-size:11px;color:#8b90a0;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:8px;';pl.textContent='Product quantities';
-    pb.appendChild(pl);
-    prodKeys.forEach(function(k){
-      var f=fieldValues[k];
-      var pr=document.createElement('div');pr.style.cssText='display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid rgba(255,255,255,0.05);';
-      var pn=document.createElement('span');pn.style.cssText='font-size:12px;color:#8b90a0;';pn.textContent=f.name;
-      var pq=document.createElement('span');pq.style.cssText='font-size:12px;font-weight:600;color:#4e9eff;';pq.textContent=f.qty+' kg';
-      pr.appendChild(pn);pr.appendChild(pq);pb.appendChild(pr);
-    });
+    var pb=document.createElement('div');pb.style.cssText='background:#1e2535;border-radius:10px;padding:14px;margin-bottom:16px;max-height:140px;overflow-y:auto;';
+    var pl=document.createElement('div');pl.style.cssText='font-size:11px;color:#8b90a0;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:8px;';pl.textContent='Product quantities';pb.appendChild(pl);
+    prodKeys.forEach(function(k){var f=fieldValues[k];var pr=document.createElement('div');pr.style.cssText='display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid rgba(255,255,255,0.05);';var pn=document.createElement('span');pn.style.cssText='font-size:12px;color:#8b90a0;';pn.textContent=f.name;var pq=document.createElement('span');pq.style.cssText='font-size:12px;font-weight:600;color:#4e9eff;';pq.textContent=f.qty+' kg';pr.appendChild(pn);pr.appendChild(pq);pb.appendChild(pr);});
     box.appendChild(pb);
   }
-
-  // Action buttons - 3 options for staff
-  var actTitle=document.createElement('div');
-  actTitle.style.cssText='font-size:13px;font-weight:700;color:#e8eaf0;margin-bottom:12px;';
-  actTitle.textContent='Send this report to management:';
-  box.appendChild(actTitle);
-
-  var btnGrid=document.createElement('div');
-  btnGrid.style.cssText='display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px;';
-
-  // Button 1 - Copy for WhatsApp
   var waBtn=document.createElement('button');
-  waBtn.style.cssText='background:#25D366;color:#fff;border:none;border-radius:10px;padding:14px 10px;font-size:13px;font-weight:700;cursor:pointer;';
-  waBtn.textContent='Copy for WhatsApp';
+  waBtn.style.cssText='width:100%;background:#25D366;color:#fff;border:none;border-radius:10px;padding:14px;font-size:14px;font-weight:700;cursor:pointer;margin-bottom:10px;';
+  waBtn.textContent='Copy report for WhatsApp / Excel';
   waBtn.onclick=function(){
     var ta=document.createElement('textarea');ta.value=window._prodRpt||'';
     document.body.appendChild(ta);ta.select();document.execCommand('copy');document.body.removeChild(ta);
-    waBtn.textContent='Copied!';waBtn.style.background='#128C7E';
-    setTimeout(function(){waBtn.textContent='Copy for WhatsApp';waBtn.style.background='#25D366';},3000);
+    waBtn.textContent='Copied! Paste in WhatsApp or Excel';waBtn.style.background='#128C7E';
+    setTimeout(function(){waBtn.textContent='Copy report for WhatsApp / Excel';waBtn.style.background='#25D366';},3000);
   };
-  btnGrid.appendChild(waBtn);
-
-  // Button 2 - Copy for Excel
-  var xlBtn=document.createElement('button');
-  xlBtn.style.cssText='background:#217346;color:#fff;border:none;border-radius:10px;padding:14px 10px;font-size:13px;font-weight:700;cursor:pointer;';
-  xlBtn.textContent='Copy for Excel';
-  xlBtn.onclick=function(){
-    // Build tab-separated row for Excel paste
-    var cols=['ProductionDate','TotalOutput','Downtime','DowntimeReason','ProductionStatus','Blender1_HM65','Blender1_HM72','Blender1_HM72C','Blender1_HM50','Blender1_HM650','Blender2_SCH','Blender2_OSCHM','Plant2_RSA','Plant3_RR90','Plant3_RR95','Plant3_RR110','Plant3_RR160','Plant3_RR95A','Plant3_RR125','Plant3_PDR','Plant3_RR95H','Plant3_RR80H','Plant3_RR100H','Plant3_R40','Plant3_Colophony','Plant4_SA85','Plant4_PB110','Plant4_Polyterpene','Plant4_TP115','Plant5_WAX'];
-    var keyMap={'Blender1_HM65':'blender1_0','Blender1_HM72':'blender1_1','Blender1_HM72C':'blender1_2','Blender1_HM50':'blender1_3','Blender1_HM650':'blender1_4','Blender2_SCH':'blender2_0','Blender2_OSCHM':'blender2_1','Plant2_RSA':'plant2_0','Plant3_RR90':'plant3_0','Plant3_RR95':'plant3_1','Plant3_RR110':'plant3_2','Plant3_RR160':'plant3_3','Plant3_RR95A':'plant3_4','Plant3_RR125':'plant3_5','Plant3_PDR':'plant3_6','Plant3_RR95H':'plant3_7','Plant3_RR80H':'plant3_8','Plant3_RR100H':'plant3_9','Plant3_R40':'plant3_10','Plant3_Colophony':'plant3_11','Plant4_SA85':'plant4_0','Plant4_PB110':'plant4_1','Plant4_Polyterpene':'plant4_2','Plant4_TP115':'plant4_3','Plant5_WAX':'plant5_0'};
-    var vals=[];
-    cols.forEach(function(c){
-      if(c==='ProductionDate') vals.push(dateStr);
-      else if(c==='TotalOutput') vals.push(totalRounded);
-      else if(c==='Downtime') vals.push(downtime);
-      else if(c==='DowntimeReason') vals.push(dtReason||'');
-      else if(c==='ProductionStatus') vals.push(status);
-      else{var k=keyMap[c];var f=fieldValues[k];vals.push(f?f.qty:0);}
-    });
-    var hdr=cols.join('\t');
-    var row=vals.join('\t');
-    var ta=document.createElement('textarea');ta.value=hdr+'\n'+row;
-    document.body.appendChild(ta);ta.select();document.execCommand('copy');document.body.removeChild(ta);
-    xlBtn.textContent='Copied!';xlBtn.style.background='#0e5c30';
-    setTimeout(function(){xlBtn.textContent='Copy for Excel';xlBtn.style.background='#217346';},3000);
-  };
-  btnGrid.appendChild(xlBtn);
-  box.appendChild(btnGrid);
-
-  // Helper text
-  var hlp=document.createElement('div');
-  hlp.style.cssText='background:#1e2535;border-radius:10px;padding:12px;margin-bottom:14px;font-size:12px;color:#8b90a0;line-height:1.6;';
-  hlp.innerHTML='<strong style="color:#e8eaf0;">Copy for WhatsApp</strong> — pastes as a clean message. Send to supervisor or management WhatsApp group.<br><strong style="color:#e8eaf0;">Copy for Excel</strong> — pastes as a row directly into Excel. Open Excel file → click empty cell in next row → press Ctrl+V.';
-  box.appendChild(hlp);
-
-  // Close
-  var cb=document.createElement('button');
-  cb.style.cssText='width:100%;background:#1e2535;border:1px solid rgba(255,255,255,0.1);color:#8b90a0;border-radius:10px;padding:12px;font-size:13px;cursor:pointer;';
-  cb.textContent='Close — Senior view already updated';
-  cb.onclick=function(){ov.remove();};
-  box.appendChild(cb);
-
-  ov.appendChild(box);
-  document.body.appendChild(ov);
+  box.appendChild(waBtn);
+  var cb=document.createElement('button');cb.style.cssText='width:100%;background:#1e2535;border:1px solid rgba(255,255,255,0.1);color:#8b90a0;border-radius:10px;padding:12px;font-size:13px;cursor:pointer;';cb.textContent='Close — Senior view already updated';cb.onclick=function(){ov.remove();};box.appendChild(cb);
+  var note=document.createElement('div');note.style.cssText='font-size:11px;color:#555c70;text-align:center;margin-top:10px;';note.textContent='Data saved in Dashboard. Syncing to Google Sheets in background.';box.appendChild(note);
+  ov.appendChild(box);document.body.appendChild(ov);
 }
 
 
@@ -867,10 +820,12 @@ function renderDept(d){
 }
 function subEOD(id){
   var d=DEPTS.find(function(x){return x.id===id;});
-  var data={at:new Date().toLocaleTimeString()};
+  var data={at:new Date().toLocaleTimeString(),date:getNow()};
   d.fields.forEach(function(f){var e=el('f_'+f.k);if(e.value!==undefined)data[f.k]=e.value;});
   var ne=el('f_notes');if(ne.value!==undefined)data.notes=ne.value;
-  SD[id]=data;toast('Update submitted — management notified');
+  SD[id]=data;
+  syncToSheets(d.name,data,function(ok){showSyncResult(ok,d.name);});
+  toast('Update submitted — management notified');
 }
 
 // ── FIRE PUMP ──
@@ -933,6 +888,9 @@ function subFP(){
   if(!SD['fp_log'])SD['fp_log']=[];
   SD['fp_log'].unshift(row);
   SD['firepump']={submitted:true,date:row.date,cb:row.cb};
+  var fpData={date:getNow(),at:getTm()};
+  ['mood','diesel','elecpump','jockey','dg','elec','dl','hk','cb','rb','remarks'].forEach(function(k){var e=el('fp_'+k);if(e&&e.value!==undefined)fpData[k]=e.value;});
+  syncToSheets('Fire Pump House',fpData,function(ok){showSyncResult(ok,'Fire Pump');});
   toast('Fire pump checklist submitted — management notified');
   setTimeout(renderFP,400);
 }
@@ -1140,6 +1098,8 @@ function subMP(){
   SD['mp_log']=SD['mp_log'].filter(function(r){return r.key!==key;});
   SD['mp_log'].unshift(row);
   SD['manpower']={submitted:true,reportedBy:row.reportedBy,date:dateStr,total:row.grandTotal,diff:row.grandTotal-gReqT};
+  var mpData={date:getNow(),at:getTm(),shift:SD['mp_shift']||'day'};
+  syncToSheets('HR Manpower',mpData,function(ok){showSyncResult(ok,'HR Manpower');});
   toast('Manpower report submitted — management notified');
   setTimeout(renderMP,400);
 }
@@ -1185,6 +1145,5 @@ function renderSenior(){
 buildTabs();
 render();
 </script>
-
-
-</body></html>
+</body>
+</html>
